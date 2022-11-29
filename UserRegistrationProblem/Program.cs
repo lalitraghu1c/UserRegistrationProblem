@@ -11,7 +11,7 @@ namespace UserRegistrationProblem
             while (choice)
             {
                 Console.WriteLine("Enter your choice");
-                Console.WriteLine("1. Enter First Name\n2. Enter Last Name\n3. Enter Email ID\n4. Enter Mobile Number\n5. Exit");
+                Console.WriteLine("1. Enter First Name\n2. Enter Last Name\n3. Enter Email ID\n4. Enter Mobile Number\n5. Enter Password\n6. Exit");
                 int condition = Convert.ToInt32(Console.ReadLine());
                 switch (condition)
                 {
@@ -30,6 +30,10 @@ namespace UserRegistrationProblem
                     case 4:
                         Console.WriteLine("Enter Mobile Number - ");
                         user.MobileNumber();
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter Password (min. 8 characters) - ");
+                        user.Password();
                         break;
                     default:
                         choice = false;

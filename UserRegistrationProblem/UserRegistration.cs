@@ -11,7 +11,7 @@ namespace UserRegistrationProblem
     {
         const string FIRST_NAME = "^[A-Z]{1}[a-z]{2,}$", LAST_NAME = "^[A-Z]{1}[a-z]{2,}$";
         const string VALID_EMAIL ="^[a-z]{3,}[.]{0,1}[a-z]{0,}[@]{1}[a-z]{2,}[.]{1}[a-z]{2,}[.]{0,1}[a-z]{0,}$";
-        const string MOBILE_FORMAT = "^[0-9]{2}[ ]{1}[0-9]{10}";
+        const string MOBILE_FORMAT = "^[0-9]{2}[ ]{1}[0-9]{10}", PASSWORD = "^[a-z]{8,}$";
         public void FirstName()
         {
             string input = Console.ReadLine();
@@ -41,6 +41,14 @@ namespace UserRegistrationProblem
             string input = Console.ReadLine();
             if (Regex.IsMatch(input, MOBILE_FORMAT))
                 Console.WriteLine("Valid Mobile Number - " + input);
+            else
+                Console.WriteLine("Invalid");
+        }
+        public void Password()
+        {
+            string input = Console.ReadLine();
+            if (Regex.IsMatch(input, PASSWORD))
+                Console.WriteLine("Valid Password");
             else
                 Console.WriteLine("Invalid");
         }
