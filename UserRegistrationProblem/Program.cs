@@ -32,7 +32,7 @@ namespace UserRegistrationProblem
                         user.MobileNumber();
                         break;
                     case 5:
-                        Console.WriteLine("Enter Password (min. 8 characters) - ");
+                        Console.WriteLine("Enter Password (min. 8 characters & atleast 1 upper case) - ");
                         user.Password();
                         break;
                     default:
