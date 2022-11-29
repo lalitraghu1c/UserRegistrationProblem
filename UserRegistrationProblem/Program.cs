@@ -11,7 +11,7 @@ namespace UserRegistrationProblem
             while (choice)
             {
                 Console.WriteLine("Enter your choice");
-                Console.WriteLine("1. Enter First Name\n2. Exit");
+                Console.WriteLine("1. Enter First Name\n2. Enter Last Name\n3. Enter Email ID\n4. Exit");
                 int condition = Convert.ToInt32(Console.ReadLine());
                 switch (condition)
                 {
@@ -23,7 +23,12 @@ namespace UserRegistrationProblem
                         Console.WriteLine("Enter Surname - ");
                         user.LastName();
                         break;
+                    case 3:
+                        Console.WriteLine("Enter Email ID - ");
+                        user.ValidEmail();
+                        break;
                     default:
+                        choice = false;
                         Console.WriteLine("Try Again! Bro.");
                         break;
                 }
