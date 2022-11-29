@@ -16,8 +16,12 @@ namespace UserRegistrationProblem
                 switch (condition)
                 {
                     case 1:
-                        Console.WriteLine("Enter name - ");
+                        Console.WriteLine("Enter Name - ");
                         user.FirstName();
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter Surname - ");
+                        user.LastName();
                         break;
                     default:
                         Console.WriteLine("Try Again! Bro.");
