@@ -12,7 +12,7 @@ namespace UserRegistrationProblem
             while (choice)
             {
                 Console.WriteLine("Enter your choice");
-                Console.WriteLine("1. Enter First Name\n2. Enter Last Name\n3. Enter Email ID\n4. Enter Mobile Number\n5. Enter Password\n6. Validating Email Sample\n7. Exit");
+                Console.WriteLine("1. Enter First Name\n2. Enter Last Name\n3. Enter Email ID\n4. Enter Mobile Number\n5. Enter Password\n6. Validating Email Sample\n7. Enter First Name using Lambda Expression\n8. Exit");
                 int condition = Convert.ToInt32(Console.ReadLine());
                 switch (condition)
                 {
@@ -38,6 +38,10 @@ namespace UserRegistrationProblem
                         break;
                     case 6:
                         user.ReadEmailsData(emailsFilePath);
+                        break;
+                    case 7:
+                        user.ValidFirstNameByLambda();
+                        Console.WriteLine("Successfull");
                         break;
                     default:
                         choice = false;

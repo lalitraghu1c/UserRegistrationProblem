@@ -71,5 +71,7 @@ namespace UserRegistrationProblem
                     Console.WriteLine("{0} as Email Id is invalid ", email);
             }
         }
+        public bool ValidFirstNameByLambda() => Regex.IsMatch(Console.ReadLine(), "^[A-Z]{1}[a-z]{2,}$") ? true : false;
+
     }
 }
