@@ -3,6 +3,7 @@ namespace UserRegistrationProblem
 {
     public class Program
     {
+        public static string emailsFilePath = @"D:\Projects-Bridgelabz\UserRegistrationProblem\UserRegistrationProblem\Emails.txt";
         public static void Main(string[] args)
         {
             UserRegistration user = new UserRegistration();
@@ -11,7 +12,7 @@ namespace UserRegistrationProblem
             while (choice)
             {
                 Console.WriteLine("Enter your choice");
-                Console.WriteLine("1. Enter First Name\n2. Enter Last Name\n3. Enter Email ID\n4. Enter Mobile Number\n5. Enter Password\n6. Exit");
+                Console.WriteLine("1. Enter First Name\n2. Enter Last Name\n3. Enter Email ID\n4. Enter Mobile Number\n5. Enter Password\n6. Validating Email Sample\n7. Exit");
                 int condition = Convert.ToInt32(Console.ReadLine());
                 switch (condition)
                 {
@@ -34,6 +35,9 @@ namespace UserRegistrationProblem
                     case 5:
                         Console.WriteLine("Enter Password (min. 8 characters, atleast 1 upper case, atleast 1 numberic value & exact 1 special character {!,@,#,$,%}) - ");
                         user.Password();
+                        break;
+                    case 6:
+                        user.ReadEmailsData(emailsFilePath);
                         break;
                     default:
                         choice = false;
